@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+section {
+    height: max-content;
+    padding: 30px;
+    background-color: hsl(226, 43%, 10%);
+    display: grid;
+    grid-template-areas:
+        "report work paly study"
+        "report exercise social selfCare";
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 100vh;
+}
+
+section article.art {
+    background-color: hsl(235, 46%, 20%);
+    color: white;
+    align-self: flex-end;
+    height: 215px;
+    border-radius: 10px;
+    padding: 20px;
+    display: grid;
+}
+
+section .report article.artReport {
+    background-color: hsl(264, 64%, 52%);
+    display: grid;
+    border-radius: 10px;
+    height: 400px;
+    padding: 25px;
+}
+
+section .report article.artReport img {
+    width: 40%;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+section .report article.artReport p {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    color: hsl(236, 100%, 87%);
+
+}
+
+section .report article.artReport p span {
+    font-size: 40px;
+    line-height: 45px;
+    color: rgba(255, 255, 255, 0.712);
+}
+
+section .report {
+    background-color: hsl(235, 46%, 20%);
+    grid-area: report;
+    border-radius: 10px;
+}
+
+section .report article:last-child {
+    color: hsl(236, 100%, 87%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 10px;
+    padding: 0 25px;
+    height: 157px;
+    cursor: pointer;
+}
+
+section .report article:last-child h2:hover {
+    color: white;
+}
+
+section .work {
+    grid-area: work;
+    background-color: hsl(15, 100%, 70%);
+    display: grid;
+    border-radius: 10px;
+    background-image: url(images/icon-work.svg);
+    background-repeat: no-repeat;
+    background-position-x: 170px;
+    background-position-y: -10px;
+}
+
+section .art h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section .art h2 img {
+    cursor: pointer;
+}
+
+section .art .hours h1 {
+    font-size: 50px;
+}
+
+section .art .hours p {
+    color: hsl(236, 100%, 87%);
+    font-size: 12px;
+}
+
+section .paly {
+    grid-area: paly;
+    background-color: hsl(195, 74%, 62%);
+    display: grid;
+    border-radius: 10px;
+    background-image: url(images/icon-play.svg);
+    background-repeat: no-repeat;
+    background-position-x: 170px;
+    background-position-y: -10px;
+}
+
+section .study {
+    grid-area: study;
+    background-color: hsl(348, 100%, 68%);
+    display: grid;
+    border-radius: 10px;
+    background-image: url(images/icon-study.svg);
+    background-repeat: no-repeat;
+    background-position-x: 170px;
+    background-position-y: -10px;
+}
+
+section .exercise {
+    grid-area: exercise;
+    background-color: hsl(145, 58%, 55%);
+    display: grid;
+    border-radius: 10px;
+    background-image: url(images/icon-exercise.svg);
+    background-repeat: no-repeat;
+    background-position-x: 165px;
+    background-position-y: -7px;
+}
+
+section .social {
+    grid-area: social;
+    background-color: hsl(264, 64%, 52%);
+    display: grid;
+    border-radius: 10px;
+    background-image: url(images/icon-social.svg);
+    background-repeat: no-repeat;
+    background-position-x: 180px;
+    background-position-y: -10px;
+}
+
+section .selfCare {
+    grid-area: selfCare;
+    background-color: hsl(43, 84%, 65%);
+    display: grid;
+    border-radius: 10px;
+    background-image: url(images/icon-self-care.svg);
+    background-repeat: no-repeat;
+    background-position-x: 180px;
+    background-position-y: -10px;
+}
+
+@media screen and (max-width:375px) {
+    section {
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+        gap: 2rem;
+
+    }
+    section .report{
+        height: 40vh;
+        background-color: hsl(235, 46%, 20%);
+    }
+    section .report article.artReport {
+        height: 25vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+    section .report article.artReport img{
+        width: 70px;
+        height: 70px;
+    }
+    section .report article.artReport p span {
+        font-size: 20px;
+        line-height: 4px;
+        padding-bottom: 10px;
+    }
+    section .report article:last-child{
+        flex-direction: row;
+        align-items: center;
+        height: 14vh;
+    }
+    .hours{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    section .art .hours h1 {
+        font-size: 40px;
+    }
+    section article.art{
+        height: 30vh;
+    }
+    section .work,section .paly ,section .study,section .exercise,section .selfCare,section .social  {
+        height: 37vh;
+        background-position-x: 225px;
+    }
+}
